@@ -12,7 +12,7 @@ list.addEventListener("click", (e) => {
   if (!e.target.matches("[data-item-checkbox]")) return;
   const parent = e.target.closest(".list-item");
   const todoId = parent.dataset.todoId;
-  parent.remove();
+
   const todo = allTodos.find((t) => t.id === todoId);
 
   todo.complete = e.target.checked;
@@ -24,6 +24,7 @@ list.addEventListener("click", (e) => {
   if (!e.target.matches("[data-button-delete]")) return;
   const parent = e.target.closest(".list-item");
   const todoId = parent.dataset.todoId;
+  parent.remove();
   allTodos = allTodos.filter((t) => t.id !== todoId);
   saveLocal();
 });

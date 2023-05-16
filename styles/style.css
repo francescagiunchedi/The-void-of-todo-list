@@ -99,14 +99,6 @@ h1 {
   margin: 2rem auto;
   width: 70%;
 }
-#todo-form button {
-  background-color: black;
-  color: #ffffff;
-  padding: 1rem 1.2rem;
-  border-radius: 0.5rem;
-  font-size: 2rem;
-  border: none;
-}
 
 #container #input-text {
   font-family: "Anaheim", sans-serif;
@@ -141,9 +133,9 @@ h1 {
   background-color: #ffffff80;
 }
 
-#container .todo-div #list input [type="checkbox"] {
+#container .todo-div #list [type="checkbox"],
+#container .todo-div #list label {
   cursor: pointer;
 }
-#container .todo-div #list [data-item-checkbox] {
-  /* create costum check box that will be hiiden after */
-}
+/* #container .todo-div #list [data-item-checkbox] {
+  /* create costum check box that will be hiiden after }*/
