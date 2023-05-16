@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <!-- google fonts -->
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&family=Anaheim&family=Sigmar&display=swap"
+      rel="stylesheet" />
+    <!-- normalize css -->
+    <link
+      rel="stylesheet"
+      href="/styles/normalixe.css" />
+    <!-- css -->
+    <link
+      rel="stylesheet"
+      href="/styles/style.css" />
+    <!-- responsive css -->
+    <link
+      rel="stylesheet"
+      href="/styles/Responsive.css" />
+    <!-- script -->
+    <script
+      src="/script.js"
+      defer></script>
+    <!-- fontawsome -->
+    <script
+      src="https://kit.fontawesome.com/8805a199d5.js"
+      crossorigin="anonymous"></script>
+    <title>My todo List ✏</title>
+  </head>
+  <body>
+    <div id="container">
+      <div class="todo-div">
+        <h1 class="phone">
+          <div>My</div>
+          <div><i class="fa fa-regular fa-infinity"></i></div>
+          <div>list</div>
+        </h1>
+        <h1 class="desktop">My never ending list</h1>
+        <ul id="list"></ul>
+        <form id="todo-form">
+          <label for="input-text"></label>
+          <input
+            type="text"
+            placeholder="tasks to forget"
+            id="input-text" />
+          <button type="submit"><i class="fa fa-solid fa-plus"></i></button>
+        </form>
+      </div>
+
+      <video
+        muted
+        autoplay
+        loop
+        preload="auto"
+        src="/src/nebula-24623.mp4"
+        type="video/mp4"></video>
+    </div>
+
+    <template id="template">
+      <li class="list-item">
+        <label class="label-item">
+          <input
+            type="checkbox"
+            data-item-checkbox />
+          <span data-list-item></span>
+
+          <i
+            data-button-delete
+            class="fa fa-solid fa-trash"></i>
+        </label>
+      </li>
+    </template>
+  </body>
+</html>
