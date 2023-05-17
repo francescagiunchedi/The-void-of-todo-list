@@ -158,5 +158,52 @@ h1 {
 #container .todo-div #list [type="checkbox"],
 #container .todo-div #list label {
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
+#container .todo-div #list [type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+}
+
+#container .todo-div #list [data-list-item] {
+  display: flex;
+  align-items: center;
+}
+
+#container .todo-div #list [data-list-item]::before {
+  content: "";
+  width: 1em;
+  height: 1em;
+  border: 0.1em solid white;
+  border-radius: var(--radius);
+  margin-right: 0.5em;
+}
+
+#container .todo-div #list [data-list-item]:hover::before,
+#container
+  .todo-div
+  #list
+  input[type="checkbox"]:hover
+  + [data-list-item]::before {
+  background-color: #ffffff80;
+}
+
+#container
+  .todo-div
+  #list
+  input[type="checkbox"]:focus
+  + [data-list-item]::before {
+  box-shadow: 0 0 15px white;
+}
+
+#container
+  .todo-div
+  #list
+  input[type="checkbox"]:checked
+  + [data-list-item]::before {
+  content: "✔";
+  display: flex;
+  justify-content: center;
+}
